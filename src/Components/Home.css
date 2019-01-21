@@ -1,0 +1,19 @@
+.background{
+  background-color:rgba(94, 92, 91 , 0.4);
+
+}
+
+.grid{
+
+	text-align: center;
+	border-radius: 20px;
+
+}
+
+.HeroText{
+	color: white;
+	opacity: 1;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
