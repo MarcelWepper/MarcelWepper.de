@@ -17,3 +17,14 @@
 	padding-bottom: 10px;
 
 }
+
+.SocialLinks {
+	color: white;
+	font-size: 5em;
+	padding: 8px;
+  display: flex;
+	justify-content: space-between;
+	width: 50%;
+	margin: auto;
+
+}
