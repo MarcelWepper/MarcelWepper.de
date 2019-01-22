@@ -15,6 +15,7 @@
     "node": "^11.7.0",
     "node-gyp": "^3.8.0",
     "react": "^16.7.0",
+    "react-cookie-consent": "^2.0.1",
     "react-dom": "^16.7.0",
     "react-lazy-hero": "^2.0.0",
     "react-router-dom": "^4.3.1",

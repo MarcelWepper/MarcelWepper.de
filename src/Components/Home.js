@@ -7,6 +7,7 @@ import  Picture from'./Pics/code_background.jpg';
 import  Profile from'./Pics/me.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWineBottle } from '@fortawesome/free-solid-svg-icons'
+import CookieConsent from "react-cookie-consent";
 
 
 export default class Home extends React.Component {
@@ -42,7 +43,17 @@ export default class Home extends React.Component {
 							</Row>
 						</div>
 					</Container>
-			</LazyHero>
+				</LazyHero>
+				<CookieConsent
+		    location="bottom"
+		    buttonText=<a href="/contact" >Weitere Informationen.</a>
+		    cookieName="CookieConsent"
+		    style={{ background: "#2B373B" }}
+		    buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+		    expires={150}>
+
+		    Diese Webseite benutzt Cookies, um die Benutzererfahrung zu verbessern. Indem Sie diese Website nutzen, erklären Sie sich mit dieser Verwendung einverstanden.
+				</CookieConsent>
 			</div>
 		);
 	}
