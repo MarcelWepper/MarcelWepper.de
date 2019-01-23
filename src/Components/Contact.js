@@ -1,6 +1,7 @@
-import React from 'react'
-import './Home.css'
+import React from 'react';
 import LazyHero from 'react-lazy-hero';
+
+import './Home.css';
 import Picture from'./Pics/Kontakt.jpg';
 
 export default class Contact extends React.Component {

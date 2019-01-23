@@ -4,9 +4,26 @@
 }
 
 .grid{
-
 	text-align: center;
 	border-radius: 20px;
+
+}
+.HomeText{
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align: center;
+
+
+}
+
+.CardText{
+  text-align: center;
+  font-size: inherit +2;
+
+}
+
+.CardTitle{
+
 
 }
 
@@ -33,5 +50,18 @@
 	justify-content: space-between;
 	width: 50%;
 	margin: auto;
+
+}
+
+.NavLink{
+  color: white !important;
+
+}
+
+.Footer{
+  color:white;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: #404040;
 
 }

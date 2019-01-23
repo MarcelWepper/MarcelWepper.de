@@ -1,10 +1,10 @@
-import React from 'react'
-import { Switch, Route } from 'react-router-dom'
-import Home from './Home'
-import Projects from './Projects'
-import Contact from './Contact'
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-import './Home.css'
+import Home from './Home';
+import Projects from './Projects';
+import Contact from './Contact';
+import './Home.css';
 
 // The Main component renders one of the three provided
 // Routes (provided that one matches). Both the /roster
