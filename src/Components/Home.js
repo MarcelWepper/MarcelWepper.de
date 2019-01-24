@@ -31,7 +31,7 @@ export default class Home extends React.Component {
 								<Col><h1> Marcel-René Wepper</h1></Col>
 							</Row>
 							<Row>
-								<Col><h3> Web-Design | SEO | Projekt-Management </h3></Col>
+								<Col><h3> Web-Design | Online-Marketing | Projekt-Management </h3></Col>
 							</Row>
 
 							<Row>
@@ -75,7 +75,7 @@ export default class Home extends React.Component {
 									<Card body className="CardText">
 								    <CardImg top width="100%" src={SEO} alt="Card image cap" />
 							      <CardBody>
-							        <CardTitle tag="h3">SEO</CardTitle>
+							        <CardTitle tag="h3">Online-Marketing</CardTitle>
 							        <CardText>Sie haben eine tolle, neue Idee, die Webseite steht auch schon, bloß kommen keine Leute auf die Seite?</CardText>
 											<CardText>Ich helfe Ihnen, die Online-Präsenz zu steigern!</CardText>
 											<CardText></CardText>
@@ -102,8 +102,10 @@ export default class Home extends React.Component {
 				{/*	Hier wird der Cookie und deren Parameter bestimmt	*/}
 				<CookieConsent
 		    location="bottom"
-		    buttonText=<a href="/contact" >Weitere Informationen.</a>
+        buttonText=<a href="/contact" >Weitere Informationen.</a>
 		    cookieName="CookieConsent"
+        acceptOnScroll={true}
+        acceptOnScrollPercentage={5}
 		    style={{ background: "#2B373B" }}
 		    buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
 		    expires={150}>

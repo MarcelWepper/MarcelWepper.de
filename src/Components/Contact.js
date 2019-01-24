@@ -9,7 +9,7 @@ export default class Contact extends React.Component {
 		return(
   		<div class>
 				<LazyHero color = "#000000" parallaxOffset="100" minHeight='100vh' opacity ="0.5" imageSrc={Picture}>
-					<div className= "HeroText"><h1> Kontakt und Datenschutzerklärung</h1> </div>
+					<div className= "HeroText"><h1> Kontakt und Datenschutz</h1> </div>
 				</LazyHero>
 				<div className="KontaktText">
 				<h1> Angaben gemäß § 5 TMG: </h1>
@@ -67,7 +67,7 @@ export default class Contact extends React.Component {
 
 								<p>	Sie können Änderungen oder den Widerruf einer Einwilligung durch entsprechende Mitteilung an uns mit Wirkung für die Zukunft vornehmen.  </p>
 
-								<h2>	 Änderung unserer Datenschutzbestimmungen </h2>
+								<h3>	 Änderung unserer Datenschutzbestimmungen </h3>
 
 								<p>	Wir behalten uns vor, diese Datenschutzerklärung gelegentlich anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z. B. bei der Einführung neuer Services. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung. </p>
 
