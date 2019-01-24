@@ -42,6 +42,15 @@
 
 }
 
+.Picture{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 240px;
+  height: 240px;
+
+}
+
 .SocialLinks {
 	color: white;
 	font-size: 5em;

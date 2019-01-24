@@ -8,6 +8,7 @@ import Fade from 'react-reveal/Fade';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
 import  Picture from'./Pics/code_background.jpg';
+import  Code from'./Pics/code.jpg';
 import  Profile from'./Pics/me.png';
 import  SEO from'./Pics/SEO.jpg';
 import  Project from'./Pics/Project.jpg';
@@ -38,12 +39,16 @@ export default class Home extends React.Component {
 								<div className="SocialLinks">
 									<Col>{/* LinkedIn Icon */}
 									<a href="https://www.linkedin.com/in/marcel-rené-wepper-a25421169/" rel="noopener noreferrer" target="_blank">
-										<i className ="fa fa-linkedin-square"  aria-hidden="true" />
+										<i className ="fa fa-linkedin-square" aria-hidden="true" />
 									</a></Col>
 									<Col>{/* Weppes Icon */}
-										<a href="http://weppes.de" rel="noopener noreferrer" target="_blank">
-											<i className ="fas fa-wine-bottle " color="white"  aria-hidden="true" />
+										<a href="https://www.xing.com/profile/MarcelRene_Wepper/cv" rel="noopener noreferrer" target="_blank">
+											<i class="fab fa-xing-square" color="white"  aria-hidden="true"></i>
 										</a></Col>
+                    <Col>{/* Weppes Icon */}
+  									<a href="http://weppes.de" rel="noopener noreferrer" target="_blank">
+  									  <i className ="fas fa-wine-bottle " color="white"  aria-hidden="true" />
+  									</a></Col>
 								</div>
 							</Row>
 						</div>
@@ -61,7 +66,7 @@ export default class Home extends React.Component {
 								<Col>
 								<Fade left delay={300}>
 									<Card body className="CardText">
-								    <CardImg top width="100%" src={Picture} alt="Card image cap" />
+								    <CardImg top width="100%" src={Code} alt="Card image cap" />
 							      <CardBody>
 							        <CardTitle tag="h3">Web-Design</CardTitle>
 							        <CardText>Sie wollen eine moderne Webseite, welche für mobile Geräte optimiert und günstig im Unterhalt ist?</CardText>
@@ -105,7 +110,7 @@ export default class Home extends React.Component {
         buttonText=<a href="/contact" >Weitere Informationen.</a>
 		    cookieName="CookieConsent"
         acceptOnScroll={true}
-        acceptOnScrollPercentage={5}
+        acceptOnScrollPercentage={10}
 		    style={{ background: "#2B373B" }}
 		    buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
 		    expires={150}>
