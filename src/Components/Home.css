@@ -54,10 +54,8 @@
 .SocialLinks {
 	color: white;
 	font-size: 5em;
-	padding: 8px;
   display: flex;
-text-align: center;
-	width: 50%;
+  text-align: center;
 	margin: auto;
 
 }
