@@ -1,7 +1,7 @@
 import React from 'react';
 import LazyHero from 'react-lazy-hero';
 import { Container, Row, Col, Jumbotron, Card, CardImg, CardText, CardBody,
-  CardTitle } from 'reactstrap';
+  CardTitle, Thumbnail } from 'reactstrap';
 import CookieConsent from "react-cookie-consent";
 import Fade from 'react-reveal/Fade';
 
@@ -78,7 +78,7 @@ export default class Home extends React.Component {
 								<Col>
 								<Fade left delay={200}>
 									<Card body className="CardText">
-								    <CardImg top width="100%" src={SEO} alt="Card image cap" />
+								    <Thumbnail href='#' top width="100%" src={SEO} alt="Card image cap" />
 							      <CardBody>
 							        <CardTitle tag="h3">Online-Marketing</CardTitle>
 							        <CardText>Sie haben eine tolle, neue Idee, die Webseite steht auch schon, bloß kommen keine Leute auf die Seite?</CardText>
