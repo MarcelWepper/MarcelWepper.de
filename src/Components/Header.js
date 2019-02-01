@@ -22,27 +22,25 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-      {/*  Des Icon muss an die Linke seite, nicht Rechts */}
-      {/*  Hintergrund muss weg von transparent */}
-            <MDBNavbar color="indigo" dark expand="md" fixed="top">
-              <MDBNavbarBrand href="/">
-                <strong>Marcel-René Wepper</strong>
-              </MDBNavbarBrand>
-              {!this.state.isWideEnough && <MDBNavbarToggler onClick={this.onClick} />}
-              <MDBCollapse isOpen={this.state.collapse} navbar>
-                <MDBNavbarNav left>
-                  <MDBNavItem>
-                    <MDBNavLink to="/">Home</MDBNavLink>
-                  </MDBNavItem>
-                  <MDBNavItem>
-                    <MDBNavLink to="/projects">Projekte</MDBNavLink>
-                  </MDBNavItem>
-                  <MDBNavItem>
-                    <MDBNavLink to="/contact">Kontakt</MDBNavLink>
-                  </MDBNavItem>
-                </MDBNavbarNav>
-              </MDBCollapse>
-            </MDBNavbar>
+        <MDBNavbar color="bg-dark" fixed="top" dark expand="md" scrolling transparent>
+            {!this.state.isWideEnough && <MDBNavbarToggler onClick={this.onClick} />}
+          <MDBCollapse isOpen={this.state.collapse} navbar>
+            <MDBNavbarBrand href="/">
+              <strong>Marcel-René Wepper</strong>
+            </MDBNavbarBrand>
+            <MDBNavbarNav left>
+              <MDBNavItem>
+                <MDBNavLink to="/">Home</MDBNavLink>
+              </MDBNavItem>
+              <MDBNavItem>
+                <MDBNavLink to="/projects">Projekte</MDBNavLink>
+              </MDBNavItem>
+              <MDBNavItem>
+                <MDBNavLink to="/contact">Kontakt</MDBNavLink>
+              </MDBNavItem>
+            </MDBNavbarNav>
+          </MDBCollapse>
+        </MDBNavbar>
       </div>
     );
   }

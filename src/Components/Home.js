@@ -15,6 +15,11 @@ import  Project from'./Pics/Project.jpg';
 
 
 export default class Home extends React.Component {
+
+  componentWillUnmount(){
+    window.scrollTo(0, 0)
+  }
+  
 	render(){
 		return(
 			<div>

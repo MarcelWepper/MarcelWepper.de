@@ -5,7 +5,13 @@ import './Home.css';
 import Picture from'./Pics/Weppes.jpg';
 
 export default class Projects extends React.Component {
+
+	componentWillUnmount(){
+    window.scrollTo(0, 0)
+  }
+	
 	render(){
+
 		return(
   		<div>
 				<LazyHero color = "#000000" parallaxOffset="100" minHeight='100vh' opacity ="0.5" imageSrc={Picture}>
