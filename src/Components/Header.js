@@ -22,6 +22,8 @@ class Header extends React.Component {
   render() {
     return (
       <div>
+      {/*  Des Icon muss an die Linke seite, nicht Rechts */}
+      {/*  Hintergrund muss weg von transparent */}
             <MDBNavbar color="indigo" dark expand="md" fixed="top">
               <MDBNavbarBrand href="/">
                 <strong>Marcel-René Wepper</strong>
