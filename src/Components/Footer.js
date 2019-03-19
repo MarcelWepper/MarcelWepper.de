@@ -10,7 +10,7 @@ export default class Footer extends React.Component {
 			<div className="Footer">
 				<Container className= "grid">
 					<Row>
-						<Col> <NavLink to="/contact" className="NavLink"> Kontakt</NavLink></Col>
+						<Col> <NavLink to="mailto:marcelwepper@gmail.com" className="NavLink"> Mailen</NavLink></Col>
 						<Col> <NavLink to="/contact" className="NavLink">Impressum</NavLink></Col>
 						<Col> <NavLink to="/contact" className="NavLink">Datenschutzhinweis</NavLink></Col>
 					</Row>

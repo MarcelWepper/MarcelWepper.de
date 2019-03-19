@@ -4,8 +4,11 @@ import { Container, Row, Col, Jumbotron, Card, CardImg, CardText, CardBody,
   CardTitle } from 'reactstrap';
 import CookieConsent from "react-cookie-consent";
 import Fade from 'react-reveal/Fade';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+import { School, Star, Work } from '@material-ui/icons';
+
 import './Home.css';
 import  Picture from'./Pics/code_background.jpg';
 import  Code from'./Pics/code.jpg';
@@ -19,7 +22,7 @@ export default class Home extends React.Component {
   componentWillUnmount(){
     window.scrollTo(0, 0)
   }
-  
+
 	render(){
 		return(
 			<div>
@@ -37,7 +40,7 @@ export default class Home extends React.Component {
 								<Col><h1> Marcel-René Wepper</h1></Col>
 							</Row>
 							<Row>
-								<Col><h3> Web-Design | Online-Marketing | Projekt-Management </h3></Col>
+								<Col><h3> Web-Design | Projekt-Management | Online-Marketing  </h3></Col>
 							</Row>
 
 							<Row>
@@ -61,53 +64,150 @@ export default class Home extends React.Component {
 				</LazyHero>
 
 				<div className="HomeText">
-					<h1> Kompetenz und Leistung in folgenden Bereichen: </h1>
+
 				</div>
 
 				{/* CARDS */}
 					<Jumbotron fluid>
         		<Container fluid>
 							<Row>
-								<Col>
+                <Col>
+                <h1 style={{"padding-bottom":"1%"}}> Kompetenz und Expertise in folgenden Bereichen </h1>
+                </Col>
+              </Row>
+              <Row>
+								<Col md="4" sm="12">
 								<Fade left delay={300}>
 									<Card body className="CardText">
 								    <CardImg top width="100%" src={Code} alt="Card image cap" />
 							      <CardBody>
 							        <CardTitle tag="h3">Web-Design</CardTitle>
 							        <CardText>Sie wollen eine moderne Webseite, welche für mobile Geräte optimiert und günstig im Unterhalt ist?</CardText>
-											<CardText>Sprechen Sie mich an!</CardText>
+                      <CardText>Durch zahlreiche Projekte habe ich Erfahrung in genau diesem Bereich gesammelt!</CardText>
 							      </CardBody>
 								  </Card>
 									</Fade>
 								</Col>
-								<Col>
-								<Fade left delay={200}>
-									<Card body className="CardText">
-								    <CardImg top width="100%" src={SEO} alt="Card image cap" />
-							      <CardBody>
-							        <CardTitle tag="h3">Online-Marketing</CardTitle>
-							        <CardText>Sie haben eine tolle, neue Idee, die Webseite steht auch schon, bloß kommen keine Leute auf die Seite?</CardText>
-											<CardText>Ich helfe Ihnen, die Online-Präsenz zu steigern!</CardText>
-											<CardText></CardText>
-							      </CardBody>
-								  </Card>
-									</Fade>
+								<Col md="4" sm="12">
+  								<Fade left delay={200}>
+                    <Card body className="CardText">
+                      <CardImg top width="100%" src={Project} alt="Card image cap" />
+                      <CardBody>
+                        <CardTitle tag="h3">Projekt-Management</CardTitle>
+                        <CardText>Mit Erfahrung im klassischen und agilen Projekt-Management helfe ich bei der erfolgreichen Umsetzung von Projekten. </CardText>
+                        <CardText>Besonderes bei der Konzeption und Implementierung von Softwareprojekten.</CardText>
+                      </CardBody>
+                    </Card>
+			            </Fade>
 								</Col>
-								<Col>
+								<Col md="4" sm="12">
 								<Fade left>
-									<Card body className="CardText">
-								    <CardImg top width="100%" src={Project} alt="Card image cap" />
-							      <CardBody>
-							        <CardTitle tag="h3">Projekt-Management</CardTitle>
-							        <CardText>Mit Erfahrung im klassischen und agilen Projekt-Management helfe ich bei der erfolgreichen Umsetzung von Projekten. </CardText>
-											<CardText>Besonderes bei der Konzeption und Implementierung von Softwareprojekten.</CardText>
-										</CardBody>
-								  </Card>
-									</Fade>
+                  <Card body className="CardText">
+                    <CardImg top width="100%" src={SEO} alt="Card image cap" />
+                    <CardBody>
+                      <CardTitle tag="h3">Online-Marketing</CardTitle>
+                      <CardText>Sie haben eine tolle, neue Idee, und die Webseite steht auch schon. Es fehlen bloß noch die Besucher auf der Seite? </CardText>
+                      <CardText>Durch Online-Marketing lässt sich dies ändern!</CardText>
+                    </CardBody>
+                  </Card>
+                  </Fade>
 								</Col>
 							</Row>
         		</Container>
       		</Jumbotron>
+
+          <h1 style={{"padding-left":"2%"}}> Erfahrung und Projekte </h1>
+          <VerticalTimeline>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--education"
+              date="2016 - present"
+              iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+              icon={<School />}
+            >
+              <h3 className="vertical-timeline-element-title">B. Sc. Wirtschaftsinformatik</h3>
+              <h4 className="vertical-timeline-element-subtitle">DHBW Mannheim</h4>
+              <p>
+                Java, SQL, Datenbankdesign, Systemanalyse und -entwurf, Marketing, BWL
+              </p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="2016 - present"
+              iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+              icon={<Work />}
+            >
+              <h3 className="vertical-timeline-element-title">Dualer Student - Wirtschaftsinformatik</h3>
+              <h4 className="vertical-timeline-element-subtitle">TRACOE medical GmbH, Nieder-Olm</h4>
+              <p>
+                Junior Projekt-Manager
+              </p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="2019 - present"
+              iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+              icon={<Star />}
+            >
+              <h3 className="vertical-timeline-element-title">easyvent.io</h3>
+              <h4 className="vertical-timeline-element-subtitle">Front-End Developer / App-Developer</h4>
+              <p>
+                Start-Up - Digitalisierung der Event-Branche
+              </p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="2018 - present"
+              iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+              icon={<Star />}
+            >
+              <h3 className="vertical-timeline-element-title">Weppes - Wein</h3>
+              <h4 className="vertical-timeline-element-subtitle"> Besuche meine Webseite:
+                <a href="http://weppes.de" rel="noopener noreferrer" target="_blank">
+                  <i className ="fas fa-wine-bottle " color="white"  aria-hidden="true" />
+                </a>
+              </h4>
+              <p>
+                Apfelwein und mehr...
+              </p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--education"
+              date="Nov. 2018"
+              iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+              icon={<School />}
+            >
+              <h3 className="vertical-timeline-element-title">Project-Management - PRINCE 2</h3>
+              <h4 className="vertical-timeline-element-subtitle">Foundation Zertifikat</h4>
+              <p>
+                Im Rahmen einer mehrtätigen Weiterbildung erworben.
+              </p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--education"
+              date="Sep. 2017"
+              iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+              icon={<School />}
+            >
+              <h3 className="vertical-timeline-element-title">Grundlagen des digitalen Marketings</h3>
+              <h4 className="vertical-timeline-element-subtitle">Google Zertifikat</h4>
+              <p>
+                Im Rahmen eines Online-Kurses von Google erlangt.
+              </p>
+            </VerticalTimelineElement>
+
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="2012 - 2016"
+              iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+              icon={<Work />}
+            >
+              <h3 className="vertical-timeline-element-title">Assistent der Geschäftsführung</h3>
+              <h4 className="vertical-timeline-element-subtitle">H. Schembs Architekturbüro</h4>
+              <p>
+                Zahlreiche Aufgaben in der Administration.
+              </p>
+            </VerticalTimelineElement>
+          </VerticalTimeline>
 
 				{/*	Hier wird der Cookie und deren Parameter bestimmt	*/}
 				<CookieConsent
