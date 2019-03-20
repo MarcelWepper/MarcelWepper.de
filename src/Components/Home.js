@@ -15,6 +15,10 @@ import  Code from'./Pics/code.jpg';
 import  Profile from'./Pics/me.png';
 import  SEO from'./Pics/SEO.jpg';
 import  Project from'./Pics/Project.jpg';
+import  ReactPic from'./Pics/react.png';
+import  Amazon from'./Pics/amazon.png';
+import  Java from'./Pics/java.png';
+import SQL from'./Pics/sql.png';
 
 
 export default class Home extends React.Component {
@@ -208,6 +212,63 @@ export default class Home extends React.Component {
               </p>
             </VerticalTimelineElement>
           </VerticalTimeline>
+
+  				{/* CARDS */}
+  					<Jumbotron fluid>
+          		<Container fluid>
+  							<Row>
+                  <Col>
+                  <h1 style={{"padding-bottom":"1%"}}> IT-Kentnisse in folgenden Bereichen: </h1>
+                  </Col>
+                </Row>
+                <Row>
+  								<Col md="3" sm="12">
+  								<Fade left delay={300}>
+  									<Card body className="CardText">
+  								    <CardImg top width="100%" src={ReactPic} alt="Card image cap" />
+  							      <CardBody>
+  							        <CardTitle tag="h3">JSX - React</CardTitle>
+  							        <CardText>Front-End Developer für React und React Native Apps.</CardText>
+  							      </CardBody>
+  								  </Card>
+  									</Fade>
+  								</Col>
+  								<Col md="3" sm="12">
+    								<Fade left delay={200}>
+                      <Card body className="CardText">
+                        <CardImg top width="100%" src={Amazon} alt="Card image cap" />
+                        <CardBody>
+                          <CardTitle tag="h3">AWS - Cloud</CardTitle>
+                          <CardText> Durch intensive Arbeit mit der AWS - Cloud sind hier Kentnisse vorhanden. </CardText>
+                        </CardBody>
+                      </Card>
+  			            </Fade>
+  								</Col>
+    							<Col md="3" sm="12">
+    								<Fade left delay={300}>
+    									<Card body className="CardText">
+    								    <CardImg top width="100%" src={Java} alt="Card image cap" />
+    							      <CardBody>
+    							        <CardTitle tag="h3">Java</CardTitle>
+    							        <CardText>Desktop sowie Android Applications.</CardText>
+    							      </CardBody>
+    								  </Card>
+    									</Fade>
+    								</Col>
+                    <Col md="3" sm="12">
+      								<Fade left delay={300}>
+      									<Card body className="CardText">
+      								    <CardImg top width="100%" src={SQL} alt="Card image cap" />
+      							      <CardBody>
+      							        <CardTitle tag="h3">SQL</CardTitle>
+      							        <CardText>Datenbankentwurf und -Abfragen.</CardText>
+      							      </CardBody>
+      								  </Card>
+      									</Fade>
+      								</Col>
+  							</Row>
+          		</Container>
+        		</Jumbotron>
 
 				{/*	Hier wird der Cookie und deren Parameter bestimmt	*/}
 				<CookieConsent
