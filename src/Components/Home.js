@@ -18,7 +18,7 @@ import  Project from'./Pics/Project.jpg';
 import  ReactPic from'./Pics/react.png';
 import  Amazon from'./Pics/amazon.png';
 import  Java from'./Pics/java.png';
-import SQL from'./Pics/sql.png';
+import  SQL from'./Pics/sql.png';
 
 
 export default class Home extends React.Component {
@@ -44,7 +44,7 @@ export default class Home extends React.Component {
 								<Col><h1> Marcel-René Wepper</h1></Col>
 							</Row>
 							<Row>
-								<Col><h3> Web-Design | Projekt-Management | Online-Marketing  </h3></Col>
+								<Col><h3> Web-Design | Projekt-Management | Gründer</h3></Col>
 							</Row>
 
 							<Row>
@@ -80,7 +80,7 @@ export default class Home extends React.Component {
                 </Col>
               </Row>
               <Row>
-								<Col md="4" sm="12">
+								<Col md="6" sm="12">
 								<Fade left delay={300}>
 									<Card body className="CardText">
 								    <CardImg top width="100%" src={Code} alt="Card image cap" />
@@ -92,29 +92,17 @@ export default class Home extends React.Component {
 								  </Card>
 									</Fade>
 								</Col>
-								<Col md="4" sm="12">
+								<Col md="6" sm="12">
   								<Fade left delay={200}>
                     <Card body className="CardText">
                       <CardImg top width="100%" src={Project} alt="Card image cap" />
                       <CardBody>
                         <CardTitle tag="h3">Projekt-Management</CardTitle>
                         <CardText>Mit Erfahrung im klassischen und agilen Projekt-Management helfe ich bei der erfolgreichen Umsetzung von Projekten. </CardText>
-                        <CardText>Besonderes bei der Konzeption und Implementierung von Softwareprojekten.</CardText>
+                        <CardText>- Besonderes bei der Konzeption und Implementierung von Softwareprojekten -</CardText>
                       </CardBody>
                     </Card>
 			            </Fade>
-								</Col>
-								<Col md="4" sm="12">
-								<Fade left>
-                  <Card body className="CardText">
-                    <CardImg top width="100%" src={SEO} alt="Card image cap" />
-                    <CardBody>
-                      <CardTitle tag="h3">Online-Marketing</CardTitle>
-                      <CardText>Sie haben eine tolle, neue Idee, und die Webseite steht auch schon. Es fehlen bloß noch die Besucher auf der Seite? </CardText>
-                      <CardText>Durch Online-Marketing lässt sich dies ändern!</CardText>
-                    </CardBody>
-                  </Card>
-                  </Fade>
 								</Col>
 							</Row>
         		</Container>
@@ -128,10 +116,10 @@ export default class Home extends React.Component {
               iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
               icon={<School />}
             >
-              <h3 className="vertical-timeline-element-title">B. Sc. Wirtschaftsinformatik</h3>
-              <h4 className="vertical-timeline-element-subtitle">DHBW Mannheim</h4>
+              <h3 className="vertical-timeline-element-title" style={{"fontSize":"1.2em"}}>DHBW Mannheim</h3>
+              <h4 className="vertical-timeline-element-subtitle">Studium - <br/> B. Sc. Wirtschaftsinformatik</h4>
               <p>
-                Java, SQL, Datenbankdesign, Systemanalyse und -entwurf, Marketing, BWL
+                Java, SQL, Datenbankdesign, Systemanalyse, Systementwurf, Marketing, Betriebswirtschaftslehre
               </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
@@ -140,8 +128,8 @@ export default class Home extends React.Component {
               iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
               icon={<Work />}
             >
-              <h3 className="vertical-timeline-element-title">Dualer Student - Wirtschaftsinformatik</h3>
-              <h4 className="vertical-timeline-element-subtitle">TRACOE medical GmbH, Nieder-Olm</h4>
+              <h3 className="vertical-timeline-element-title" style={{"fontSize":"1.2em"}}>TRACOE medical GmbH, Nieder-Olm</h3>
+              <h4 className="vertical-timeline-element-subtitle">Dualer Student - Wirtschaftsinformatik</h4>
               <p>
                 Junior Projekt-Manager
               </p>
@@ -152,10 +140,25 @@ export default class Home extends React.Component {
               iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
               icon={<Star />}
             >
-              <h3 className="vertical-timeline-element-title">easyvent.io</h3>
-              <h4 className="vertical-timeline-element-subtitle">Front-End Developer / App-Developer</h4>
+              <h3 className="vertical-timeline-element-title">PAXET - Gruendermotor Meisterklasse #1</h3>
+              <h4 className="vertical-timeline-element-subtitle">CTO - Full-Stack-Developer - React.js</h4>
+              <a href="https://paxet.de" rel="noopener noreferrer" target="_blank">
+                <p>
+                  Start-Up - Revolutionierung der Paketzustellung
+                </p>
+              </a>
+
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--education"
+              date="Nov. 2018"
+              iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+              icon={<School />}
+            >
+              <h3 className="vertical-timeline-element-title">Project-Management - PRINCE 2</h3>
+              <h4 className="vertical-timeline-element-subtitle">Foundation Zertifikat</h4>
               <p>
-                Start-Up - Digitalisierung der Event-Branche
+                Im Rahmen einer mehrtätigen Weiterbildung erworben.
               </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
@@ -170,22 +173,28 @@ export default class Home extends React.Component {
                   <i className ="fas fa-wine-bottle " color="white"  aria-hidden="true" />
                 </a>
               </h4>
-              <p>
-                Apfelwein und mehr...
-              </p>
+
+              <a href="https://weppes.de" rel="noopener noreferrer" target="_blank">
+                <p>
+                  Apfelwein und mehr umweltfreundliche Getränke!
+                </p>
+              </a>
             </VerticalTimelineElement>
+
             <VerticalTimelineElement
-              className="vertical-timeline-element--education"
-              date="Nov. 2018"
-              iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-              icon={<School />}
+              className="vertical-timeline-element--work"
+              date="2017 - present"
+              iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+              icon={<Work />}
             >
-              <h3 className="vertical-timeline-element-title">Project-Management - PRINCE 2</h3>
-              <h4 className="vertical-timeline-element-subtitle">Foundation Zertifikat</h4>
+              <h3 className="vertical-timeline-element-title" style={{"fontSize":"1.2em"}}>P. Wepper Trockenbau GmbH</h3>
+              <h4 className="vertical-timeline-element-subtitle">Teilzeit Hilfskraft</h4>
               <p>
-                Im Rahmen einer mehrtätigen Weiterbildung erworben.
+                - IT-Administration einschließlich Verwaltung der Infrastruktur und der Hardware<br/>
+                - Administration einschließlich Rechnungserstellung und operativem Einkauf
               </p>
             </VerticalTimelineElement>
+
             <VerticalTimelineElement
               className="vertical-timeline-element--education"
               date="Sep. 2017"
@@ -205,8 +214,8 @@ export default class Home extends React.Component {
               iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
               icon={<Work />}
             >
-              <h3 className="vertical-timeline-element-title">Assistent der Geschäftsführung</h3>
-              <h4 className="vertical-timeline-element-subtitle">H. Schembs Architekturbüro</h4>
+              <h3 className="vertical-timeline-element-title" style={{"fontSize":"1.2em"}}>H. Schembs Architekturbüro</h3>
+              <h4 className="vertical-timeline-element-subtitle">Referent des Inhabers</h4>
               <p>
                 Zahlreiche Aufgaben in der Administration.
               </p>
@@ -227,22 +236,11 @@ export default class Home extends React.Component {
   									<Card body className="CardText">
   								    <CardImg top width="100%" src={ReactPic} alt="Card image cap" />
   							      <CardBody>
-  							        <CardTitle tag="h3">JSX - React</CardTitle>
-  							        <CardText>Front-End Developer für React und React Native Apps.</CardText>
+  							        <CardTitle tag="h3">React.js</CardTitle>
+  							        <CardText>Full-Stack-Developer für React<br/> und React Native Apps.</CardText>
   							      </CardBody>
   								  </Card>
   									</Fade>
-  								</Col>
-  								<Col md="3" sm="12">
-    								<Fade left delay={200}>
-                      <Card body className="CardText">
-                        <CardImg top width="100%" src={Amazon} alt="Card image cap" />
-                        <CardBody>
-                          <CardTitle tag="h3">AWS - Cloud</CardTitle>
-                          <CardText> Durch intensive Arbeit mit der AWS - Cloud sind hier Kentnisse vorhanden. </CardText>
-                        </CardBody>
-                      </Card>
-  			            </Fade>
   								</Col>
     							<Col md="3" sm="12">
     								<Fade left delay={300}>
@@ -250,7 +248,7 @@ export default class Home extends React.Component {
     								    <CardImg top width="100%" src={Java} alt="Card image cap" />
     							      <CardBody>
     							        <CardTitle tag="h3">Java</CardTitle>
-    							        <CardText>Desktop sowie Android Applications.</CardText>
+    							        <CardText>Desktop- sowie Android-<br/> Applikationen.</CardText>
     							      </CardBody>
     								  </Card>
     									</Fade>
@@ -261,11 +259,22 @@ export default class Home extends React.Component {
       								    <CardImg top width="100%" src={SQL} alt="Card image cap" />
       							      <CardBody>
       							        <CardTitle tag="h3">SQL</CardTitle>
-      							        <CardText>Datenbankentwurf und -Abfragen.</CardText>
+      							        <CardText>Datenbankentwurf und <br/>-abfragen.</CardText>
       							      </CardBody>
       								  </Card>
       									</Fade>
       								</Col>
+                      <Col md="3" sm="12">
+                        <Fade left delay={200}>
+                          <Card body className="CardText">
+                            <CardImg top width="100%" src={Amazon} alt="Card image cap" />
+                            <CardBody>
+                              <CardTitle tag="h3">AWS - Cloud</CardTitle>
+                              <CardText> AWS - <br/> Cloud Kentnisse </CardText>
+                            </CardBody>
+                          </Card>
+                        </Fade>
+                      </Col>
   							</Row>
           		</Container>
         		</Jumbotron>
