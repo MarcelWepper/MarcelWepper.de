@@ -1,7 +1,15 @@
-import React from 'react';
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink } from 'mdbreact';
+import React from "react";
+import {
+  MDBNavbar,
+  MDBNavbarBrand,
+  MDBNavbarNav,
+  MDBNavbarToggler,
+  MDBCollapse,
+  MDBNavItem,
+  MDBNavLink
+} from "mdbreact";
 
-import './Home.css'
+import "./Home.css";
 
 class Header extends React.Component {
   constructor(props) {
@@ -22,12 +30,21 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-        <MDBNavbar color="bg-dark" fixed="top" dark expand="md" scrolling transparent>
-            {!this.state.isWideEnough && <MDBNavbarToggler onClick={this.onClick} />}
+        <MDBNavbar
+          color="bg-dark"
+          fixed="top"
+          dark
+          expand="md"
+          scrolling
+          transparent
+        >
+          <MDBNavbarBrand href="/">
+            <strong>Marcel-René Wepper</strong>
+          </MDBNavbarBrand>
+          {!this.state.isWideEnough && (
+            <MDBNavbarToggler onClick={this.onClick} />
+          )}
           <MDBCollapse isOpen={this.state.collapse} navbar>
-            <MDBNavbarBrand href="/">
-              <strong>Marcel-René Wepper</strong>
-            </MDBNavbarBrand>
             <MDBNavbarNav left>
               <MDBNavItem>
                 <MDBNavLink to="/">Home</MDBNavLink>
