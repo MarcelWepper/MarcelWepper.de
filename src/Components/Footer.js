@@ -36,10 +36,20 @@ export default class Footer extends React.Component {
                 style={{
                   color: "#fff",
                   "font-size": "0.8em",
-                  "padding-top": "0.5%"
+                  "padding-top": "2.5%"
                 }}
               >
-                Die Seite wurde von mir in React programmiert.
+                Die Seite wurde von mir mit{" "}
+                <p
+                  style={{
+                    color: "#fff",
+                    "font-size": "2em",
+                    "padding-top": "0.5%"
+                  }}
+                >
+                  &hearts;
+                </p>{" "}
+                in React programmiert.
               </p>
             </Col>
           </Row>

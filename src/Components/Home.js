@@ -65,7 +65,7 @@ export default class Home extends React.Component {
               </Row>
               <Row>
                 <Col>
-                  <h3> Full-Stack-Developer | Projekt-Management | Gründer</h3>
+                  <h3> Full-Stack-Developement | Project-Management</h3>
                 </Col>
               </Row>
 
@@ -74,7 +74,7 @@ export default class Home extends React.Component {
                   <Col>
                     {/* LinkedIn Icon */}
                     <a
-                      href="https://www.linkedin.com/in/marcel-rene-wepper-a25421169/"
+                      href="https://www.linkedin.com/in/marcel-rene-wepper/"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
@@ -137,8 +137,8 @@ export default class Home extends React.Component {
                         als Back-End-Developer ermöglichen Synergien.
                       </CardText>
                       <CardText>
-                        Durch zahlreiche Projekte habe ich Erfahrung in genau
-                        diesem Bereich gesammelt!
+                        Durch zahlreiche Projekte habe ich Erfahrung in diesen
+                        Bereichen gesammelt!
                       </CardText>
                     </CardBody>
                   </Card>
@@ -201,7 +201,7 @@ export default class Home extends React.Component {
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              date="2019 - present"
+              date="2019 - 2019"
               iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
               icon={<Star />}
             >
