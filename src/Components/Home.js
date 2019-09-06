@@ -31,6 +31,8 @@ import ReactPic from "./Pics/react.png";
 import Amazon from "./Pics/amazon.png";
 import Java from "./Pics/java.png";
 import SQL from "./Pics/sql.png";
+import NOSQL from "./Pics/nosql.png";
+import Python from "./Pics/python.png";
 
 export default class Home extends React.Component {
   componentWillUnmount() {
@@ -65,7 +67,7 @@ export default class Home extends React.Component {
               </Row>
               <Row>
                 <Col>
-                  <h3> Full-Stack-Developement | Project-Management</h3>
+                  <h3> Full-Stack-Development | Project-Management</h3>
                 </Col>
               </Row>
 
@@ -84,12 +86,12 @@ export default class Home extends React.Component {
                   <Col>
                     {/* Weppes Icon */}
                     <a
-                      href="https://www.xing.com/profile/MarcelRene_Wepper/cv"
+                      href="https://github.com/MarcelWepper"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
                       <i
-                        class="fab fa-xing-square"
+                        className="fab fa-github-square"
                         color="white"
                         aria-hidden="true"
                       />
@@ -98,12 +100,12 @@ export default class Home extends React.Component {
                   <Col>
                     {/* Weppes Icon */}
                     <a
-                      href="http://weppes.de"
+                      href="https://www.xing.com/profile/MarcelRene_Wepper/cv"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
                       <i
-                        className="fas fa-wine-bottle "
+                        class="fab fa-xing-square"
                         color="white"
                         aria-hidden="true"
                       />
@@ -130,7 +132,7 @@ export default class Home extends React.Component {
                   <Card body className="CardText">
                     <CardImg top width="100%" src={Code} alt="Card image cap" />
                     <CardBody>
-                      <CardTitle tag="h3">Full-Stack-Developer</CardTitle>
+                      <CardTitle tag="h3">Full-Stack-Development</CardTitle>
                       <CardText>
                         Sowohl die Konzeption und Entwicklung des Front-Ends als
                         auch der Entwurf und die Implementierung der Datenbank
@@ -308,7 +310,7 @@ export default class Home extends React.Component {
 
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              date="2017 - present"
+              date="2017 - 2019"
               iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
               icon={<Work />}
             >
@@ -376,7 +378,7 @@ export default class Home extends React.Component {
             </Row>
             <Row>
               <Col
-                md="3"
+                md="4"
                 sm="6"
                 style={{ "padding-top": "0.75%", "padding-bottom": "0.75%" }}
               >
@@ -399,7 +401,7 @@ export default class Home extends React.Component {
                 </Fade>
               </Col>
               <Col
-                md="3"
+                md="4"
                 sm="6"
                 style={{ "padding-top": "0.75%", "padding-bottom": "0.75%" }}
               >
@@ -417,7 +419,32 @@ export default class Home extends React.Component {
                 </Fade>
               </Col>
               <Col
-                md="3"
+                md="4"
+                sm="6"
+                style={{ "padding-top": "0.75%", "padding-bottom": "0.75%" }}
+              >
+                <Fade left delay={300}>
+                  <Card body className="CardText">
+                    <CardImg
+                      top
+                      width="100%"
+                      src={Python}
+                      alt="Card image cap"
+                    />
+                    <CardBody>
+                      <CardTitle tag="h3">Python</CardTitle>
+                      <CardText>
+                        Erfahrung im <br />
+                        Data-Mining.
+                      </CardText>
+                    </CardBody>
+                  </Card>
+                </Fade>
+              </Col>
+            </Row>
+            <Row>
+              <Col
+                md="4"
                 sm="6"
                 style={{ "padding-top": "0.75%", "padding-bottom": "0.75%" }}
               >
@@ -435,7 +462,30 @@ export default class Home extends React.Component {
                 </Fade>
               </Col>
               <Col
-                md="3"
+                md="4"
+                sm="6"
+                style={{ "padding-top": "0.75%", "padding-bottom": "0.75%" }}
+              >
+                <Fade left delay={300}>
+                  <Card body className="CardText">
+                    <CardImg
+                      top
+                      width="100%"
+                      src={NOSQL}
+                      alt="Card image cap"
+                    />
+                    <CardBody>
+                      <CardTitle tag="h3">NoSQL</CardTitle>
+                      <CardText>
+                        NoSQL - Datenbankanwendungen in <br />
+                        Verbindung mit Firebase.
+                      </CardText>
+                    </CardBody>
+                  </Card>
+                </Fade>
+              </Col>
+              <Col
+                md="4"
                 sm="6"
                 style={{ "padding-top": "0.75%", "padding-bottom": "0.75%" }}
               >
@@ -451,7 +501,7 @@ export default class Home extends React.Component {
                       <CardTitle tag="h3">AWS - Cloud</CardTitle>
                       <CardText>
                         {" "}
-                        AWS - <br /> Cloud Kenntnisse{" "}
+                        Serverless-Deployment und Server-Hosting{" "}
                       </CardText>
                     </CardBody>
                   </Card>
