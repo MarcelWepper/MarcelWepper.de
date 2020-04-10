@@ -138,10 +138,6 @@ export default class Home extends React.Component {
                         auch der Entwurf und die Implementierung der Datenbank
                         als Back-End-Developer ermöglichen Synergien.
                       </CardText>
-                      <CardText>
-                        Durch zahlreiche Projekte habe ich Erfahrung in diesen
-                        Bereichen gesammelt!
-                      </CardText>
                     </CardBody>
                   </Card>
                 </Fade>
@@ -165,10 +161,6 @@ export default class Home extends React.Component {
                         Mit Erfahrung im klassischen und agilen
                         Projekt-Management helfe ich bei der erfolgreichen
                         Umsetzung von Projekten.{" "}
-                      </CardText>
-                      <CardText>
-                        Erfahrungen wurden insbesondere bei der Konzeption und
-                        Implementierung von Softwareprojekten gesammelt.
                       </CardText>
                     </CardBody>
                   </Card>
@@ -203,13 +195,29 @@ export default class Home extends React.Component {
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
+              date="2019 - 2020"
+              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+              icon={<Work />}
+            >
+              <h3
+                className="vertical-timeline-element-title"
+                style={{ fontSize: "1.2em" }}
+              >
+                Universität Mannheim
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                Wissenschaftliche Hilfskraft bei der Professur für Wirtschaftsinformatik II
+              </h4>
+              <p>• Mitarbeit an einem Grid-Computing Forschungsprojekt</p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
               date="2019 - 2019"
               iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
               icon={<Star />}
             >
               {" "}
               <a
-                href="https://paxet.de"
                 rel="noopener noreferrer"
                 target="_blank"
                 style={{ color: "black" }}
@@ -257,9 +265,10 @@ export default class Home extends React.Component {
                 TRACOE medical GmbH, Nieder-Olm
               </h3>
               <h4 className="vertical-timeline-element-subtitle">
-                Dualer Student - Wirtschaftsinformatik
+                Dualer Student - Wirtschaftsinformatik - Junior Projektmanagement
               </h4>
-              <p>Junior Projekt-Manager</p>
+              <p>• Analyse bestehender Softwarelandschaften </p>
+              <p>• Einführen und Konzeption von Softwarelösungen</p>
             </VerticalTimelineElement>
 
             <VerticalTimelineElement
@@ -324,9 +333,9 @@ export default class Home extends React.Component {
                 Teilzeit Hilfskraft
               </h4>
               <p>
-                - IT-Administration einschließlich Verwaltung der Infrastruktur
-                und der Hardware
-                <br />- Administration einschließlich Rechnungserstellung und
+              • IT-Administration einschließlich Verwaltung der Infrastruktur
+                und der Hardware</p>
+                <p>• Administration einschließlich Rechnungserstellung und
                 operativem Einkauf
               </p>
             </VerticalTimelineElement>
@@ -514,10 +523,8 @@ export default class Home extends React.Component {
         {/*	Hier wird der Cookie und deren Parameter bestimmt	*/}
         <CookieConsent
           location="bottom"
-          buttonText=<a href="/contact">Weitere Informationen.</a>
+          buttonText="Akzeptieren"
           cookieName="CookieConsent"
-          acceptOnScroll={true}
-          acceptOnScrollPercentage={10}
           style={{ background: "#2B373B" }}
           buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
           expires={150}
