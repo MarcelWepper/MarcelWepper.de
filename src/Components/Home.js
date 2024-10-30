@@ -1,10 +1,8 @@
 import React from "react";
-import LazyHero from "react-lazy-hero";
 import {
   Container,
   Row,
   Col,
-  Jumbotron,
   Card,
   CardImg,
   CardText,
@@ -12,14 +10,14 @@ import {
   CardTitle
 } from "reactstrap";
 import CookieConsent from "react-cookie-consent";
-import Fade from "react-reveal/Fade";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   VerticalTimeline,
   VerticalTimelineElement
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { School, Star, Work } from "@material-ui/icons";
+import { School, Star, Work } from "@mui/icons-material";
+import { Parallax } from 'react-parallax'; // Import Parallax
 
 import "./Home.css";
 import Picture from "./Pics/code_background.jpg";
@@ -42,85 +40,59 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
-        {/* Hero-Image */}
-        <LazyHero
-          color="#000000"
-          parallaxOffset="100"
-          minHeight="100vh"
-          opacity="0.75"
-          imageSrc={Picture}
-        >
-          {/*  Grid-System */}
-          <Container className="grid background">
-            {/* 	Hier die trasnparente Box mit allem	*/}
-            <div className="HeroText">
-              <Row>
-                <Col>
-                  {" "}
-                  <img src={Profile} alt="ProfilePicture" rounded responsive />
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <h1> Marcel-René Wepper</h1>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <h3> Full-Stack-Development | Project-Management</h3>
-                </Col>
-              </Row>
+        {/* Parallax Hero Section */}
+        <Parallax bgImage={Picture} strength={500} style={{}}>
+          <div style={{ height: '100vh', display: 'flex', alignItems: 'center' }}>
+            <Container className="grid background" style={{ marginTop: "5%" }}>
+              {/* Transparent Box with Content */}
+              <div className="HeroText">
+                <Row>
+                  <Col>
+                    <img
+                      src={Profile}
+                      alt="ProfilePicture"
+                      style={{
+                        width: "25%",         // Sets the width to 25% of the parent container
+                        borderRadius: "50%",   // Makes the image circular
+                        objectFit: "cover"     // Ensures the image covers the entire area without distortion
+                      }}
+                    />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <h1>Marcel-René Wepper</h1>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <h3>PhD Candidate | PowerPlatform Architect</h3>
+                  </Col>
+                </Row>
 
-              <Row>
-                <div className="SocialLinks">
-                  <Col>
-                    {/* LinkedIn Icon */}
-                    <a
-                      href="https://www.linkedin.com/in/marcel-rene-wepper/"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <i className="fa fa-linkedin-square" aria-hidden="true" />
-                    </a>
-                  </Col>
-                  <Col>
-                    {/* Weppes Icon */}
-                    <a
-                      href="https://github.com/MarcelWepper"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <i
-                        className="fab fa-github-square"
-                        color="white"
-                        aria-hidden="true"
-                      />
-                    </a>
-                  </Col>
-                  <Col>
-                    {/* Weppes Icon */}
-                    <a
-                      href="https://www.xing.com/profile/MarcelRene_Wepper/cv"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <i
-                        class="fab fa-xing-square"
-                        color="white"
-                        aria-hidden="true"
-                      />
-                    </a>
-                  </Col>
-                </div>
-              </Row>
-            </div>
-          </Container>
-        </LazyHero>
+                <Row>
+                  <div className="SocialLinks">
+                    <Col>
+                      {/* LinkedIn Icon */}
+                      <a
+                        href="https://www.linkedin.com/in/marcel-rene-wepper/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        <i className="fa fa-linkedin-square" aria-hidden="true" />
+                      </a>
+                    </Col>
+                  </div>
+                </Row>
+              </div>
+            </Container>
+          </div>
+        </Parallax>
 
         <h1 style={{ padding: "2%" }}> Kompetenz und Expertise </h1>
 
         {/* CARDS */}
-        <Jumbotron fluid style={{ "margin-bottom": "0%" }}>
+        <div class="bg-light mb-4 py-3 py-sm-5">
           <Container fluid>
             <Row>
               <Col
@@ -128,7 +100,7 @@ export default class Home extends React.Component {
                 sm="12"
                 style={{ "padding-top": "0.75%", "padding-bottom": "0.75%" }}
               >
-                <Fade left delay={300}>
+                
                   <Card body className="CardText">
                     <CardImg top width="100%" src={Code} alt="Card image cap" />
                     <CardBody>
@@ -140,14 +112,14 @@ export default class Home extends React.Component {
                       </CardText>
                     </CardBody>
                   </Card>
-                </Fade>
+
               </Col>
               <Col
                 md="6"
                 sm="12"
                 style={{ "padding-top": "0.75%", "padding-bottom": "0.75%" }}
               >
-                <Fade left delay={200}>
+                
                   <Card body className="CardText">
                     <CardImg
                       top
@@ -164,15 +136,14 @@ export default class Home extends React.Component {
                       </CardText>
                     </CardBody>
                   </Card>
-                </Fade>
+                
               </Col>
             </Row>
           </Container>
-        </Jumbotron>
+        </div>
 
         <h1 style={{ padding: "2%" }}> Erfahrung und Projekte </h1>
-        <Jumbotron
-          fluid
+        <div class="bg-light mb-4 py-3 py-sm-5"
           style={{ "background-color": "#e9ecef", "margin-bottom": "0%" }}
         >
           <VerticalTimeline>
@@ -373,14 +344,14 @@ export default class Home extends React.Component {
               <p>Zahlreiche Aufgaben in der Administration.</p>
             </VerticalTimelineElement>
           </VerticalTimeline>
-        </Jumbotron>
+        </div>
 
         <h1 style={{ padding: "2%" }}>
           {" "}
           IT-Kenntnisse in folgenden Bereichen:{" "}
         </h1>
         {/* CARDS */}
-        <Jumbotron fluid style={{ "margin-bottom": "0%", padding: "1.5%" }}>
+        <div class="bg-light mb-4 py-3 py-sm-5" style={{ "margin-bottom": "0%", padding: "1.5%" }}>
           <Container fluid>
             <Row>
               <Col />
@@ -391,7 +362,7 @@ export default class Home extends React.Component {
                 sm="6"
                 style={{ "padding-top": "0.75%", "padding-bottom": "0.75%" }}
               >
-                <Fade left delay={300}>
+                
                   <Card body className="CardText">
                     <CardImg
                       top
@@ -407,14 +378,14 @@ export default class Home extends React.Component {
                       </CardText>
                     </CardBody>
                   </Card>
-                </Fade>
+                
               </Col>
               <Col
                 md="4"
                 sm="6"
                 style={{ "padding-top": "0.75%", "padding-bottom": "0.75%" }}
               >
-                <Fade left delay={300}>
+                
                   <Card body className="CardText">
                     <CardImg top width="100%" src={Java} alt="Card image cap" />
                     <CardBody>
@@ -425,14 +396,14 @@ export default class Home extends React.Component {
                       </CardText>
                     </CardBody>
                   </Card>
-                </Fade>
+                
               </Col>
               <Col
                 md="4"
                 sm="6"
                 style={{ "padding-top": "0.75%", "padding-bottom": "0.75%" }}
               >
-                <Fade left delay={300}>
+                
                   <Card body className="CardText">
                     <CardImg
                       top
@@ -448,7 +419,7 @@ export default class Home extends React.Component {
                       </CardText>
                     </CardBody>
                   </Card>
-                </Fade>
+                
               </Col>
             </Row>
             <Row>
@@ -457,7 +428,7 @@ export default class Home extends React.Component {
                 sm="6"
                 style={{ "padding-top": "0.75%", "padding-bottom": "0.75%" }}
               >
-                <Fade left delay={300}>
+                
                   <Card body className="CardText">
                     <CardImg top width="100%" src={SQL} alt="Card image cap" />
                     <CardBody>
@@ -468,14 +439,14 @@ export default class Home extends React.Component {
                       </CardText>
                     </CardBody>
                   </Card>
-                </Fade>
+                
               </Col>
               <Col
                 md="4"
                 sm="6"
                 style={{ "padding-top": "0.75%", "padding-bottom": "0.75%" }}
               >
-                <Fade left delay={300}>
+                
                   <Card body className="CardText">
                     <CardImg
                       top
@@ -491,14 +462,14 @@ export default class Home extends React.Component {
                       </CardText>
                     </CardBody>
                   </Card>
-                </Fade>
+                
               </Col>
               <Col
                 md="4"
                 sm="6"
                 style={{ "padding-top": "0.75%", "padding-bottom": "0.75%" }}
               >
-                <Fade left delay={200}>
+                
                   <Card body className="CardText">
                     <CardImg
                       top
@@ -514,11 +485,11 @@ export default class Home extends React.Component {
                       </CardText>
                     </CardBody>
                   </Card>
-                </Fade>
+                
               </Col>
             </Row>
           </Container>
-        </Jumbotron>
+        </div>
 
         {/*	Hier wird der Cookie und deren Parameter bestimmt	*/}
         <CookieConsent

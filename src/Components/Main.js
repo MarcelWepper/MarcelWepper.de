@@ -1,22 +1,21 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import Home from './Home';
 import Contact from './Contact';
 import './Home.css';
 
-// The Main component renders one of the three provided
-// Routes (provided that one matches). Both the /roster
-// and /schedule routes will match any pathname that starts
-// with /roster or /schedule. The / route will only match
-// when the pathname is exactly the string "/"
+// The Main component renders one of the provided
+// Routes (provided that one matches). In React Router v6,
+// exact matching is the default behavior.
 const Main = () => (
   <main>
-    <Switch>
-      <Route exact path='/' component={Home}/>
-      <Route exact path='/contact' component={Contact}/>
-    </Switch>
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/contact' element={<Contact />} />
+      {/* Add more routes here as needed */}
+    </Routes>
   </main>
-)
+);
 
-export default Main
+export default Main;

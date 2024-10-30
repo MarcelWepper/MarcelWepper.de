@@ -1,5 +1,5 @@
 import React from "react";
-import LazyHero from "react-lazy-hero";
+
 
 import "./Home.css";
 import Picture from "./Pics/Kontakt.jpg";
@@ -12,17 +12,11 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div class>
-        <LazyHero
-          color="#000000"
-          parallaxOffset="100"
-          minHeight="100vh"
-          opacity="0.5"
-          imageSrc={Picture}
-        >
+
           <div className="HeroText">
             <h1> Kontakt und Datenschutz</h1>{" "}
           </div>
-        </LazyHero>
+        
         <div className="KontaktText">
           <h1> Angaben gemäß § 5 TMG: </h1>
           <br />
