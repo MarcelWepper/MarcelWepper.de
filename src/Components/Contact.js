@@ -1,6 +1,5 @@
 import React from "react";
-
-
+import { Parallax } from 'react-parallax'; // Import Parallax
 import "./Home.css";
 import Picture from "./Pics/Kontakt.jpg";
 
@@ -12,11 +11,11 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div class>
-
+        <Parallax bgImage={Picture} strength={800} style={{height: '75vh'}}>
           <div className="HeroText">
             <h1> Kontakt und Datenschutz</h1>{" "}
           </div>
-        
+          </Parallax>
         <div className="KontaktText">
           <h1> Angaben gemäß § 5 TMG: </h1>
           <br />

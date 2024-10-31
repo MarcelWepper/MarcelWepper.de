@@ -3,11 +3,7 @@ import {
   Container,
   Row,
   Col,
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle
+
 } from "reactstrap";
 import CookieConsent from "react-cookie-consent";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -21,16 +17,7 @@ import { Parallax } from 'react-parallax'; // Import Parallax
 
 import "./Home.css";
 import Picture from "./Pics/code_background.jpg";
-import Code from "./Pics/code.jpg";
 import Profile from "./Pics/me.png";
-import SEO from "./Pics/SEO.jpg";
-import Project from "./Pics/Project.jpg";
-import ReactPic from "./Pics/react.png";
-import Amazon from "./Pics/amazon.png";
-import Java from "./Pics/java.png";
-import SQL from "./Pics/sql.png";
-import NOSQL from "./Pics/nosql.png";
-import Python from "./Pics/python.png";
 
 export default class Home extends React.Component {
   componentWillUnmount() {
@@ -82,74 +69,34 @@ export default class Home extends React.Component {
                         <i className="fa fa-linkedin-square" aria-hidden="true" />
                       </a>
                     </Col>
+                                        <Col>
+                      {/* University Icon */}
+                      <a
+                        href="https://www.bwl.uni-mannheim.de/hoehle/team/wissenschaftliche-mitarbeiter/marcel-rene-wepper/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        
+                        <i className="fa fa-university" aria-hidden="true" />
+                      </a>
+                    </Col>
                   </div>
+                  
                 </Row>
               </div>
             </Container>
           </div>
         </Parallax>
 
-        <h1 style={{ padding: "2%" }}> Kompetenz und Expertise </h1>
-
-        {/* CARDS */}
-        <div class="bg-light mb-4 py-3 py-sm-5">
-          <Container fluid>
-            <Row>
-              <Col
-                md="6"
-                sm="12"
-                style={{ "padding-top": "0.75%", "padding-bottom": "0.75%" }}
-              >
-                
-                  <Card body className="CardText">
-                    <CardImg top width="100%" src={Code} alt="Card image cap" />
-                    <CardBody>
-                      <CardTitle tag="h3">Full-Stack-Development</CardTitle>
-                      <CardText>
-                        Sowohl die Konzeption und Entwicklung des Front-Ends als
-                        auch der Entwurf und die Implementierung der Datenbank
-                        als Back-End-Developer ermöglichen Synergien.
-                      </CardText>
-                    </CardBody>
-                  </Card>
-
-              </Col>
-              <Col
-                md="6"
-                sm="12"
-                style={{ "padding-top": "0.75%", "padding-bottom": "0.75%" }}
-              >
-                
-                  <Card body className="CardText">
-                    <CardImg
-                      top
-                      width="100%"
-                      src={Project}
-                      alt="Card image cap"
-                    />
-                    <CardBody>
-                      <CardTitle tag="h3">Projekt-Management</CardTitle>
-                      <CardText>
-                        Mit Erfahrung im klassischen und agilen
-                        Projekt-Management helfe ich bei der erfolgreichen
-                        Umsetzung von Projekten.{" "}
-                      </CardText>
-                    </CardBody>
-                  </Card>
-                
-              </Col>
-            </Row>
-          </Container>
-        </div>
-
-        <h1 style={{ padding: "2%" }}> Erfahrung und Projekte </h1>
+        <h1 style={{ padding: "2%" }}> CV </h1>
         <div class="bg-light mb-4 py-3 py-sm-5"
           style={{ "background-color": "#e9ecef", "margin-bottom": "0%" }}
         >
-          <VerticalTimeline>
+                    <VerticalTimeline>
+            {/* 2023 – Present: Ph.D. Candidate */}
             <VerticalTimelineElement
               className="vertical-timeline-element--education"
-              date="2019 - present"
+              date="2023 – Present"
               iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
               icon={<School />}
             >
@@ -157,16 +104,18 @@ export default class Home extends React.Component {
                 className="vertical-timeline-element-title"
                 style={{ fontSize: "1.2em" }}
               >
-                Universität Mannheim
+                University of Mannheim
               </h3>
               <h4 className="vertical-timeline-element-subtitle">
-                Studium - <br /> M. Sc. Wirtschaftsinformatik
+                Ph.D. Candidate in Business Informatics
               </h4>
-              <p>Internationaler Masterstudiengang der Universität Mannheim.</p>
+              <p>Pursuing doctoral research in Business Informatics at the University of Mannheim</p>
             </VerticalTimelineElement>
+
+            {/* 2022 – Present: Platform Architect */}
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              date="2019 - 2020"
+              date="2022 – Present"
               iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
               icon={<Work />}
             >
@@ -174,58 +123,147 @@ export default class Home extends React.Component {
                 className="vertical-timeline-element-title"
                 style={{ fontSize: "1.2em" }}
               >
-                Universität Mannheim
+                DZ BANK AG, Frankfurt am Main
               </h3>
               <h4 className="vertical-timeline-element-subtitle">
-                Wissenschaftliche Hilfskraft bei der Professur für Wirtschaftsinformatik II
+                Platform Architect, Low Code / No-Code DEV-Lead & Member of Cloud Competence Center
               </h4>
-              <p>• Mitarbeit an einem Grid-Computing Forschungsprojekt</p>
+              <p>
+                - Leading the development team in low code/no-code platforms<br />
+                - Member of the Cloud Competence Center, focusing on cloud strategy and implementation
+              </p>
             </VerticalTimelineElement>
+
+            {/* 2019 – 2022: M.Sc. in Business Informatics */}
+            <VerticalTimelineElement
+              className="vertical-timeline-element--education"
+              date="2019 – 2022"
+              iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
+              icon={<School />}
+            >
+              <h3
+                className="vertical-timeline-element-title"
+                style={{ fontSize: "1.2em" }}
+              >
+                University of Mannheim
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                Master of Science in Business Informatics
+              </h4>
+              <p>Completed an international master's program in Business Informatics at the University of Mannheim</p>
+            </VerticalTimelineElement>
+
+            {/* 2021 – 2022: Lead Developer */}
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              date="2019 - 2019"
+              date="2021 – 2022"
+              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+              icon={<Work />}
+            >
+              <h3
+                className="vertical-timeline-element-title"
+                style={{ fontSize: "1.2em" }}
+              >
+                Osapiens GmbH, Mannheim
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                Lead TypeScript / JavaScript Developer
+              </h4>
+              <p>
+                - Led the TypeScript and JavaScript development team<br />
+                - Oversaw project development and implementation
+              </p>
+            </VerticalTimelineElement>
+
+            {/* 2020 – 2021: Junior Developer */}
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="2020 – 2021"
+              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+              icon={<Work />}
+            >
+              <h3
+                className="vertical-timeline-element-title"
+                style={{ fontSize: "1.2em" }}
+              >
+                Priming Cloud GmbH, Mannheim (acquired by Osapiens GmbH)
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                Junior TypeScript / JavaScript Developer
+              </h4>
+              <p>
+                - Developed and maintained TypeScript and JavaScript applications<br />
+                - Contributed to cloud-based solutions and services
+              </p>
+            </VerticalTimelineElement>
+
+            {/* 2020: Trainee at KPMG */}
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="2020"
+              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+              icon={<Work />}
+            >
+              <h3
+                className="vertical-timeline-element-title"
+                style={{ fontSize: "1.2em" }}
+              >
+                KPMG Germany
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                Trainee Finance and Treasury Management – Consulting & JavaScript Developer
+              </h4>
+              <p>
+                - Assisted in finance and treasury consulting projects<br />
+                - Developed JavaScript-based solutions for financial applications
+              </p>
+            </VerticalTimelineElement>
+
+            {/* 2019 – 2020: Research Assistant */}
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="2019 – 2020"
+              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+              icon={<Work />}
+            >
+              <h3
+                className="vertical-timeline-element-title"
+                style={{ fontSize: "1.2em" }}
+              >
+                University of Mannheim
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                Research Assistant – C++ Developer
+              </h4>
+              <p>
+                - Participated in a Grid-Computing research project<br />
+                - Developed C++ applications for data analysis and processing
+              </p>
+            </VerticalTimelineElement>
+
+            {/* 2019: Founder at Gründermotor */}
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="2019"
               iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
               icon={<Star />}
             >
-              {" "}
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                style={{ color: "black" }}
-              >
+
                 <h3 className="vertical-timeline-element-title">
-                  PAXET - Gruendermotor Meisterklasse #1
+                  Gründermotor
                 </h3>
                 <h4 className="vertical-timeline-element-subtitle">
-                  CTO - Full-Stack-Developer - React.js
+                  Founder – CTO - Full Stack Developer
                 </h4>
 
-                <p>Start-Up - Revolutionierung der Paketzustellung</p>
-              </a>
+                <p>Start-Up focused on revolutionizing package delivery services</p>
+              
             </VerticalTimelineElement>
-            <VerticalTimelineElement
-              className="vertical-timeline-element--education"
-              date="2016 - 2019"
-              iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-              icon={<School />}
-            >
-              <h3
-                className="vertical-timeline-element-title"
-                style={{ fontSize: "1.2em" }}
-              >
-                DHBW Mannheim
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                Studium - <br /> B. Sc. Wirtschaftsinformatik
-              </h4>
-              <p>
-                Java, SQL, Datenbankdesign, Systemanalyse, Systementwurf,
-                Marketing, Betriebswirtschaftslehre
-              </p>
-            </VerticalTimelineElement>
+
+            {/* 2016 – 2019: Dual Student at TRACOE medical GmbH */}
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              date="2016 - 2019"
+              date="2016 – 2019"
               iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
               icon={<Work />}
             >
@@ -233,262 +271,39 @@ export default class Home extends React.Component {
                 className="vertical-timeline-element-title"
                 style={{ fontSize: "1.2em" }}
               >
-                TRACOE medical GmbH, Nieder-Olm
+                TRACOE medical GmbH
               </h3>
               <h4 className="vertical-timeline-element-subtitle">
-                Dualer Student - Wirtschaftsinformatik - Junior Projektmanagement
-              </h4>
-              <p>• Analyse bestehender Softwarelandschaften </p>
-              <p>• Einführen und Konzeption von Softwarelösungen</p>
-            </VerticalTimelineElement>
-
-            <VerticalTimelineElement
-              className="vertical-timeline-element--education"
-              date="Nov. 2018"
-              iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-              icon={<School />}
-            >
-              <h3 className="vertical-timeline-element-title">
-                Project-Management - PRINCE 2
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                Foundation Zertifikat
-              </h4>
-              <p>Im Rahmen einer mehrtätigen Weiterbildung erworben.</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-              className="vertical-timeline-element--work"
-              date="2018 - present"
-              iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
-              icon={<Star />}
-            >
-              <h3 className="vertical-timeline-element-title">Weppes - Wein</h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                {" "}
-                Besuche meine Webseite:
-                <a
-                  href="http://weppes.de"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    className="fas fa-wine-bottle "
-                    color="white"
-                    aria-hidden="true"
-                  />
-                </a>
-              </h4>
-
-              <a
-                href="https://weppes.de"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <p>Apfelwein und mehr umweltfreundliche Getränke!</p>
-              </a>
-            </VerticalTimelineElement>
-
-            <VerticalTimelineElement
-              className="vertical-timeline-element--work"
-              date="2017 - 2019"
-              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-              icon={<Work />}
-            >
-              <h3
-                className="vertical-timeline-element-title"
-                style={{ fontSize: "1.2em" }}
-              >
-                P. Wepper Trockenbau GmbH
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                Teilzeit Hilfskraft
+                Dual Student – Junior Project Manager
               </h4>
               <p>
-              • IT-Administration einschließlich Verwaltung der Infrastruktur
-                und der Hardware</p>
-                <p>• Administration einschließlich Rechnungserstellung und
-                operativem Einkauf
+                - Analyzed existing software landscapes<br />
+                - Introduced and designed software solutions
               </p>
             </VerticalTimelineElement>
 
+            {/* 2016 – 2019: B.Sc. in Business Informatics */}
             <VerticalTimelineElement
               className="vertical-timeline-element--education"
-              date="Sep. 2017"
+              date="2016 – 2019"
               iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
               icon={<School />}
-            >
-              <h3 className="vertical-timeline-element-title">
-                Grundlagen des digitalen Marketings
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                Google Zertifikat
-              </h4>
-              <p>Im Rahmen eines Online-Kurses von Google erlangt.</p>
-            </VerticalTimelineElement>
-
-            <VerticalTimelineElement
-              className="vertical-timeline-element--work"
-              date="2012 - 2016"
-              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-              icon={<Work />}
             >
               <h3
                 className="vertical-timeline-element-title"
                 style={{ fontSize: "1.2em" }}
               >
-                H. Schembs Architekturbüro
+                Duale Hochschule Baden-Württemberg (DHBW), Mannheim
               </h3>
               <h4 className="vertical-timeline-element-subtitle">
-                Referent des Inhabers
+                Bachelor of Science in Business Informatics
               </h4>
-              <p>Zahlreiche Aufgaben in der Administration.</p>
+              <p>
+                - Studied Business Informatics with a dual education model<br />
+                - Gained practical experience alongside academic studies
+              </p>
             </VerticalTimelineElement>
           </VerticalTimeline>
-        </div>
-
-        <h1 style={{ padding: "2%" }}>
-          {" "}
-          IT-Kenntnisse in folgenden Bereichen:{" "}
-        </h1>
-        {/* CARDS */}
-        <div class="bg-light mb-4 py-3 py-sm-5" style={{ "margin-bottom": "0%", padding: "1.5%" }}>
-          <Container fluid>
-            <Row>
-              <Col />
-            </Row>
-            <Row>
-              <Col
-                md="4"
-                sm="6"
-                style={{ "padding-top": "0.75%", "padding-bottom": "0.75%" }}
-              >
-                
-                  <Card body className="CardText">
-                    <CardImg
-                      top
-                      width="100%"
-                      src={ReactPic}
-                      alt="Card image cap"
-                    />
-                    <CardBody>
-                      <CardTitle tag="h3">React.js</CardTitle>
-                      <CardText>
-                        Full-Stack-Developer für React
-                        <br /> und React Native Apps.
-                      </CardText>
-                    </CardBody>
-                  </Card>
-                
-              </Col>
-              <Col
-                md="4"
-                sm="6"
-                style={{ "padding-top": "0.75%", "padding-bottom": "0.75%" }}
-              >
-                
-                  <Card body className="CardText">
-                    <CardImg top width="100%" src={Java} alt="Card image cap" />
-                    <CardBody>
-                      <CardTitle tag="h3">Java</CardTitle>
-                      <CardText>
-                        Desktop- sowie Android-
-                        <br /> Applikationen.
-                      </CardText>
-                    </CardBody>
-                  </Card>
-                
-              </Col>
-              <Col
-                md="4"
-                sm="6"
-                style={{ "padding-top": "0.75%", "padding-bottom": "0.75%" }}
-              >
-                
-                  <Card body className="CardText">
-                    <CardImg
-                      top
-                      width="100%"
-                      src={Python}
-                      alt="Card image cap"
-                    />
-                    <CardBody>
-                      <CardTitle tag="h3">Python</CardTitle>
-                      <CardText>
-                        Erfahrung im <br />
-                        Data-Mining.
-                      </CardText>
-                    </CardBody>
-                  </Card>
-                
-              </Col>
-            </Row>
-            <Row>
-              <Col
-                md="4"
-                sm="6"
-                style={{ "padding-top": "0.75%", "padding-bottom": "0.75%" }}
-              >
-                
-                  <Card body className="CardText">
-                    <CardImg top width="100%" src={SQL} alt="Card image cap" />
-                    <CardBody>
-                      <CardTitle tag="h3">SQL</CardTitle>
-                      <CardText>
-                        Datenbankentwurf und <br />
-                        -abfragen.
-                      </CardText>
-                    </CardBody>
-                  </Card>
-                
-              </Col>
-              <Col
-                md="4"
-                sm="6"
-                style={{ "padding-top": "0.75%", "padding-bottom": "0.75%" }}
-              >
-                
-                  <Card body className="CardText">
-                    <CardImg
-                      top
-                      width="100%"
-                      src={NOSQL}
-                      alt="Card image cap"
-                    />
-                    <CardBody>
-                      <CardTitle tag="h3">NoSQL</CardTitle>
-                      <CardText>
-                        NoSQL - Datenbankanwendungen in <br />
-                        Verbindung mit Firebase.
-                      </CardText>
-                    </CardBody>
-                  </Card>
-                
-              </Col>
-              <Col
-                md="4"
-                sm="6"
-                style={{ "padding-top": "0.75%", "padding-bottom": "0.75%" }}
-              >
-                
-                  <Card body className="CardText">
-                    <CardImg
-                      top
-                      width="100%"
-                      src={Amazon}
-                      alt="Card image cap"
-                    />
-                    <CardBody>
-                      <CardTitle tag="h3">AWS - Cloud</CardTitle>
-                      <CardText>
-                        {" "}
-                        Serverless-Deployment und Server-Hosting{" "}
-                      </CardText>
-                    </CardBody>
-                  </Card>
-                
-              </Col>
-            </Row>
-          </Container>
         </div>
 
         {/*	Hier wird der Cookie und deren Parameter bestimmt	*/}
